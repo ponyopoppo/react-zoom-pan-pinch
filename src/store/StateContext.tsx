@@ -615,7 +615,7 @@ class StateProvider extends Component<StateContextProps, StateContextState> {
         let interval = setInterval(() => {
           if (wrapperComponent.offsetWidth) {
             const bounds = handleCalculateBounds.call(this, scale, false);
-            this.stateProvider.positionX = bounds.minPositionX;
+            this.stateProvider.positionX = bounds.maxPositionX;
             this.stateProvider.positionY = bounds.minPositionY;
             this.applyTransformation(null, null, null);
             clearInterval(interval);
